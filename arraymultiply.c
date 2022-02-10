@@ -64,12 +64,13 @@ int main(void){
 //            scanf("%d", &arr1[i][j]);
 //        }
 //    }
-
-//  해당 부분을 별도 함수(arrayInput)로 분리해 수정하였음
+//  해당 부분을 별도 함수(arrayInput)로 분리해 수정하였음\
 
     arrayInput(arr1);
 
     printf("[행렬 B]\n");
+
+    arrayInput(arr2);
 
 //     for (int i=0;i<ROW;i++){
 //        for(int j=0;j<COL;j++){
@@ -84,6 +85,7 @@ int main(void){
 
     multiplyMatrix(arr1, arr2, result);
     
+//  changed to function multiplyMatrix().    
     // for (int i=0;i<ROW;i++){
     //    for(int j=0;j<COL;j++){
     //        for (int k=0; k<COL; k++){
