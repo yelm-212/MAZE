@@ -16,32 +16,33 @@ int div(int x, int y){
 int main(void){
     int a,b;
     char op;
-    int res;
 
-    int (*fptr)(int, int);
+    int (*fptr[4])(int, int)= { sum, sub, mult, div};
+
 
     printf("a :");
     scanf("%d", &a);
 
-    printf("\nb :");
+    printf("b :");
     scanf("%d", &b);
 
-    printf("\n연산 종류 (+,-,*,/) :");
+    getchar();
+    printf("연산 종류 (+,-,*,/) :");
     scanf("%c", &op);
 
     switch (op)
     {
     case '+':
-        fptr = sum;
+    printf("a + b = %d", op, fptr[0](a, b));
         break;
     case '-':
-        fptr = sub;
+    printf("a - b = %d", op, fptr[1](a, b));
         break;
     case '*':
-        fptr = mult;
+    printf("a * b = %d", op, fptr[2](a, b));
         break;
     case '/':
-        fptr = div;
+    printf("a / b = %d", op, fptr[3](a, b));
         break;
     
     default:
@@ -49,7 +50,7 @@ int main(void){
         break;
     }
 
-    printf("\na %c b = %d", op, res);
+// printf("a %c b = %d", op, fptr(a, b));
 
     return 0;
 }
