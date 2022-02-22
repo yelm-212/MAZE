@@ -29,11 +29,11 @@ void PrintMovingObj(row,col)
     move(pos,col/2);
     printw("ㅁ");
     refresh();
-    usleep(10000);
+    usleep(100000);
     move(pos,col/2);
-    printw("                        ");
+    erase();
     pos += dir;
-    if (pos >= row){
+    if (pos >= row-1){
         dir = -1;
     }
     if (pos <= 0){
