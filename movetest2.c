@@ -28,7 +28,7 @@ void interruptHandler(int sig){
 // }
 
 void PrintMovingObj(int row,int col);
-void MoveMaze(int row,int col,int y,int x);
+void Move(int row,int col,int y,int x);
 
 int main(void)
 {
@@ -65,11 +65,11 @@ void PrintMovingObj(int row,int col)
     refresh();
     erase();
  
-    MoveMaze(row, col,y,x);
+    Move(row, col,y,x);
     
 }
 
-void MoveMaze(int row,int col,int y,int x)
+void Move(int row,int col,int y,int x)
 {
     int xdir = 0; 
     int ydir = 0;
