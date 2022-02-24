@@ -115,7 +115,7 @@ void Move(int row,int col,int y,int x)
         ypos = ypos + row;
     }
     if (xpos > col){
-        ypos = ypos - col;
+        xpos = xpos - col;
     }
     if (xpos < 0){
         xpos = xpos + col;
